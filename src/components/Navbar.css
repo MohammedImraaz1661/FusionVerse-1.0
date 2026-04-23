@@ -1,0 +1,102 @@
+/* ── Navbar ── */
+.navbar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 52px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  /* border-bottom: 1px solid rgba(255,255,255,0.06); */
+  z-index: 1000;
+}
+
+/* Logo — left */
+.navbar-logo {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 10px rgba(167,139,250,0.2));
+}
+
+/* Nav links — center (absolute so they stay perfectly centered) */
+.navbar-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+
+/* Dept label — right */
+.navbar-dept {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+/* Nav link styles */
+.nav-link {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.nav-link--active {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar--fixed {
+    padding: 10px 20px;
+  }
+
+  .navbar-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .navbar-links {
+    position: static;
+    transform: none;
+    gap: 24px;
+  }
+
+  .navbar-dept {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar--fixed {
+    justify-content: center;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+}

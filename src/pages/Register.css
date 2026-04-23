@@ -1,0 +1,76 @@
+/* ── Register Section ── */
+.register-section {
+  background: var(--bg);
+  min-height: 70vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* border-top: 1px solid rgba(255,255,255,0.06); */
+}
+
+
+.register-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  padding: 96px clamp(24px, 8vw, 128px) 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.register-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 860px;
+}
+
+.register-heading {
+  font-family: var(--font-body);
+  font-size: clamp(36px, 6.5vw, 56px);
+  font-weight: 600;
+  color: var(--fg);
+  margin: 0;
+  z-index: 1000000;
+}
+
+.register-body {
+  font-size: clamp(15px, 1.8vw, 20px);
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+  margin-top: .5rem;
+}
+
+.btn-reg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 56px;
+  border: 1.5px solid white;
+  /* border-radius: var(--radius) */
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  color: var(--fg);
+  /* background: rgba(255,255,255,0.04); */
+  backdrop-filter: blur(8px);
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.btn-reg:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .register-inner {
+    padding: 60px 24px;
+    align-items: flex-start;
+  }
+}
+

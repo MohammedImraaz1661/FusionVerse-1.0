@@ -1,0 +1,23 @@
+/* App-level layout */
+.app-scroll-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  display: none;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}

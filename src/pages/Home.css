@@ -1,0 +1,130 @@
+/* ── Home Section ── */
+.home-section {
+  /* background: var(--bg); */
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* offset for fixed navbar */
+  margin-top: 5rem;
+}
+
+/* ── Main hero ── */
+.home-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 24px 80px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.club-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.club-name {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 7vw, 50px);
+  font-weight: 400;
+  color: var(--fg);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.presents {
+  margin-top: .5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 11vw, 128px);
+  font-weight: 400;
+  color: var(--fg);
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 12px 0 0;
+  animation: fadeUp 0.85s 0.08s ease both;
+}
+
+.hero-tagline {
+  font-size: clamp(18px, 2.4vw, 20px);
+  font-weight: 600;
+  color: var(--fg);
+  margin: 8px 0 0;
+  animation: fadeUp 0.9s 0.16s ease both;
+}
+
+.hero-desc {
+  font-size: clamp(16px, 2vw, 16px);
+  font-weight: 500;
+  color: var(--fg);
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 20px 0 0;
+  animation: fadeUp 0.95s 0.24s ease both;
+}
+
+.btn-register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 1.3rem 4rem;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  color: var(--fg);
+}
+
+.btn-register:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.btn-register:active { transform: translateY(0); }
+
+/* ── Keyframes ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .btn-register { padding: 18px 44px; font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: clamp(48px, 7vw, 50px);
+  }
+  
+  .home-main {
+    /* align-items: flex-start; */
+    /* text-align: left; */
+  }
+  .club-block {
+    /* align-items: flex-start; */
+  }
+  .btn-register {
+    /* align-self: flex-start; */
+  }
+}

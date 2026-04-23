@@ -1,0 +1,41 @@
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@400;500;600&display=swap');
+
+/* ── Meyer Reset ── */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
+/* ── Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --bg: #000000;
+  --fg: #ffffff;
+  --accent: #6c63ff;
+  --accent2: #a78bfa;
+  --muted: rgba(255,255,255,0.55);
+  --nav-h: 80px;
+  --radius: 6px;
+  --font-body: 'Inter', Helvetica, sans-serif;
+  --font-display: 'Cinzel', Helvetica, serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
