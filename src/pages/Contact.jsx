@@ -2,12 +2,16 @@ import './Contact.css';
 
 const contacts = {
   faculty: [
-    { name: 'Name', contact: 'Contact' },
-    { name: 'Name', contact: 'Contact' },
+    { name: 'Prasanna Kumar', contact: '96637 01697' },
+    { name: 'Ramya A', contact: '94810 70861' },
+    { name: 'Abdul Majeed K M', contact: '98954 13378' },
+    { name: 'Safmina P K', contact: '81130 62434' },
   ],
   student: [
-    { name: 'Name', contact: 'Contact' },
-    { name: 'Name', contact: 'Contact' },
+    { name: 'Saima Sharmin', contact: '90081 87826' },
+    { name: 'Vyshnav S Madhav', contact: '97787 53233' },
+    { name: 'Vaibhav Rai', contact: '95397 55923' },
+    { name: 'Ashin Imraaz', contact: '74113 97590' },
   ],
 };
 
@@ -52,12 +56,12 @@ export default function Contact() {
               ))}
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Image placeholder */}
-      <div className="contact-image-area">
-        <div className="contact-image-placeholder" />
+          {/* Image */}
+          <div className="contact-image-area">
+            <img src="/bottom-img.jpg" alt="Contact" className="contact-image" />
+          </div>
+        </div>
       </div>
 
       {/* Bottom social links */}

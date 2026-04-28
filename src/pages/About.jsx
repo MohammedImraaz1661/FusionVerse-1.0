@@ -26,7 +26,7 @@ export default function About() {
           </p>
 
           <a
-            href="./public/Poster.jpeg"
+            href="/Poster.jpeg"
             target='__blank'
             download
             className="btn-brochure"

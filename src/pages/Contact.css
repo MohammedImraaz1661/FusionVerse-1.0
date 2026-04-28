@@ -86,22 +86,18 @@
   color: rgba(255, 255, 255, 0.45);
 }
 
-/* ── Image placeholder ── */
 .contact-image-area {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-top: 48px;
+  width: 100%;
+  margin-top: 2rem; /* Add some space above the image */
 }
 
-.contact-image-placeholder {
-  width: min(520px, 50%);
-  aspect-ratio: 4 / 3;
-  background: #d9d9d9;
+.contact-image {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Landscape orientation */
   border-radius: 2px;
-  margin-left: auto;
-  margin-right: 10%;
+  object-fit: cover;
+  display: block;
+  
 }
 
 /* ── Bottom social links ── */
@@ -144,9 +140,9 @@
     gap: 16px;
   }
 
-  .contact-image-placeholder {
-    width: 90%;
-    margin: 0 auto;
+  .contact-image {
+    width: 100%;
+    margin: 0;
   }
 
   .social-links {

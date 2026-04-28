@@ -118,9 +118,9 @@
   }
   
   .home-main {
-    /* align-items: flex-start; */
-    /* text-align: left; */
+    flex-wrap: no-wrap;  
   }
+
   .club-block {
     /* align-items: flex-start; */
   }
