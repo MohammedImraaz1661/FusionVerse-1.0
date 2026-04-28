@@ -92,6 +92,7 @@
   font-size: 18px;
   letter-spacing: 0.08em;
   color: var(--fg);
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.2s;
 }
 
 .btn-register:hover {
