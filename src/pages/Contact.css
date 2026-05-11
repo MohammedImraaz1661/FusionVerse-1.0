@@ -1,12 +1,11 @@
 /* ── Contact Section ── */
 .contact-section {
-  /* background: #0a0a0a; */
+  background: transparent;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 100px clamp(32px, 5vw, 64px) 40px;
   position: relative;
-  margin-top: 4rem;
 }
 
 /* ── Main area: left heading + right contacts ── */
@@ -14,7 +13,6 @@
   margin-top: 2rem;
   display: flex;
   gap: 20rem;
-  /* flex: 0 0 auto; */
 }
 
 /* Left column */
@@ -29,7 +27,7 @@
   font-family: var(--font-body);
   font-size: clamp(32px, 4vw, 42px);
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
   margin: 0;
   line-height: 1.1;
 }
@@ -88,16 +86,15 @@
 
 .contact-image-area {
   width: 100%;
-  margin-top: 2rem; /* Add some space above the image */
+  margin-top: 2rem;
 }
 
 .contact-image {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Landscape orientation */
+  aspect-ratio: 16 / 9;
   border-radius: 2px;
   object-fit: cover;
   display: block;
-  
 }
 
 /* ── Bottom social links ── */

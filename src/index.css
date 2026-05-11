@@ -16,9 +16,8 @@
   --accent: #6c63ff;
   --accent2: #a78bfa;
   --muted: rgba(255,255,255,0.55);
-  --nav-h: 80px;
   --radius: 6px;
-  --font-body: 'Inter', Helvetica, sans-serif;
+  --font-body: "Vercetti Regular" ;
   --font-display: 'Cinzel', Helvetica, serif;
 }
 
@@ -26,7 +25,7 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background: var(--bg);
+  background: #ffffff;
   color: var(--fg);
   font-family: var(--font-body);
 }

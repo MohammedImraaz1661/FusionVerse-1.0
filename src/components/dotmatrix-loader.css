@@ -1,0 +1,51 @@
+/* ── Dot Matrix Loader ── */
+
+.dmx-root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dmx-grid {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  grid-template-rows: repeat(5, max-content);
+  align-items: center;
+  justify-items: center;
+}
+
+.dmx-dot {
+  display: block;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.08;
+  will-change: opacity, transform;
+  transition: opacity 0.18s ease;
+}
+
+.dmx-inactive {
+  opacity: 0 !important;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.dmx-muted .dmx-dot {
+  opacity: 0.04;
+}
+
+/* Path-wave animation class */
+.dmx-path {
+  animation: dmx-path-pulse 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation-delay: calc(var(--dmx-path, 0) * -1.4s);
+  animation-duration: calc(1.4s * var(--dmx-speed, 1));
+}
+
+@keyframes dmx-path-pulse {
+  0%, 100% {
+    opacity: 0.08;
+  }
+  50% {
+    opacity: 0.94;
+  }
+}

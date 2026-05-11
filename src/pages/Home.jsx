@@ -1,8 +1,16 @@
+import LiquidBackground from '../components/ui/liquid-reveal';
 import './Home.css';
 
 export default function Home() {
   return (
     <section id="home" className="home-section">
+      {/* WebGL fluid background */}
+      <div className="liquid-bg-layer" aria-hidden="true">
+        <LiquidBackground
+          color={{ r: 0.89, g: 0.41, b: 0.06 }}
+        />
+      </div>
+
       {/* Ambient glow orbs */}
       <div className="orb orb-1" aria-hidden="true" />
       <div className="orb orb-2" aria-hidden="true" />
@@ -14,7 +22,7 @@ export default function Home() {
           <span className="presents">presents</span>
         </div>
 
-        <h1 className="hero-title">FusionVerse 1.0</h1>
+        <h1 className="hero-title">FusionVerse <span className='version'>1.0</span></h1>
 
         <p className="hero-tagline">&ldquo;Think. Create. Experience.&rdquo;</p>
 
@@ -30,3 +38,4 @@ export default function Home() {
     </section>
   );
 }
+

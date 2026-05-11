@@ -1,13 +1,11 @@
 /* ── About Section ── */
 .about-section {
-  background: var(--bg);
+  background: transparent;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* top divider line */
-  /* border-top: 1px solid rgba(255,255,255,0.06); */
 }
 
 /* Inner layout */
@@ -33,7 +31,7 @@
   font-family: var(--font-body);
   font-size: clamp(36px, 6vw, 46px);
   font-weight: 600;
-  color: var(--fg);
+  color: #ffffff;
   margin: 0;
   background: linear-gradient(135deg, #fff 30%, #a78bfa);
   -webkit-background-clip: text;
@@ -59,7 +57,7 @@
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.14em;
-  color: var(--fg);
+  color: #ffffff;
   background: rgba(255,255,255,0.04);
   backdrop-filter: blur(8px);
   transition: background 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.2s;
@@ -101,8 +99,8 @@
 }
 
 .feature-icon { font-size: 28px; line-height: 1; }
-.feature-title { font-size: 18px; font-weight: 600; color: var(--fg); margin: 0; }
-.feature-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
+.feature-title { font-size: 18px; font-weight: 600; color: #ffffff; margin: 0; }
+.feature-desc { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.6; margin: 0; }
 
 @media (max-width: 600px) {
   .about-inner { gap: 48px; }

@@ -1,12 +1,11 @@
 /* ── Register Section ── */
 .register-section {
-  background: var(--bg);
+  background: transparent;
   min-height: 70vh;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* border-top: 1px solid rgba(255,255,255,0.06); */
 }
 
 
@@ -32,7 +31,7 @@
   font-family: var(--font-body);
   font-size: clamp(36px, 6.5vw, 56px);
   font-weight: 600;
-  color: var(--fg);
+  color: #ffffff;
   margin: 0;
   z-index: 1000000;
 }
@@ -54,7 +53,7 @@
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.16em;
-  color: var(--fg);
+  color: #ffffff;
   /* background: rgba(255,255,255,0.04); */
   backdrop-filter: blur(8px);
   transition: background 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.2s;
@@ -73,4 +72,3 @@
     align-items: flex-start;
   }
 }
-

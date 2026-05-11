@@ -2,8 +2,127 @@
 .app-scroll-container {
   width: 100%;
   min-height: 100vh;
-  background: #000;
+  background: transparent;
   scroll-behavior: smooth;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Loading Screen ── */
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  opacity: 1;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loader-screen.loader-exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── Site entrance ── */
+.site-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-enter {
+  animation: site-fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes site-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Grid Distortion Absolute Background */
+.grid-distortion-absolute {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: #fff;
+}
+
+/* Sections after hero wrapper */
+.after-hero-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Ensure sections are relative and transparent */
+.after-hero-wrapper > section {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Force text colors for readability on white background */
+.after-hero-wrapper h2, 
+.after-hero-wrapper h3, 
+.after-hero-wrapper p,
+.after-hero-wrapper .about-heading,
+.after-hero-wrapper .about-body,
+.after-hero-wrapper .register-heading,
+.after-hero-wrapper .register-body,
+.after-hero-wrapper .contact-heading,
+.after-hero-wrapper .contact-sub,
+.after-hero-wrapper .contact-name,
+.after-hero-wrapper .contact-info,
+.after-hero-wrapper .group-heading {
+  color: #000000 !important;
+}
+
+.after-hero-wrapper .btn-brochure,
+.after-hero-wrapper .btn-reg {
+  border-color: #000000 !important;
+  color: #000000 !important;
+  background: rgba(0,0,0,0.05) !important;
+}
+
+.after-hero-wrapper .btn-brochure:hover,
+.after-hero-wrapper .btn-reg:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+.after-hero-wrapper .feature-card {
+  border-color: rgba(0,0,0,0.1) !important;
+  background: rgba(0,0,0,0.03) !important;
+}
+
+.after-hero-wrapper .feature-title {
+  color: #000000 !important;
+}
+
+.after-hero-wrapper .feature-desc {
+  color: rgba(0,0,0,0.6) !important;
+}
+
+.after-hero-wrapper .contact-card {
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+.after-hero-wrapper .social-link {
+  color: rgba(0,0,0,0.7) !important;
+}
+
+.after-hero-wrapper .social-link:hover {
+  color: #000000 !important;
 }
 
 html {
@@ -19,5 +138,28 @@ html::-webkit-scrollbar{
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: #000;
+  background: transparent;
+}
+
+/* ── Glass Dock fixed at bottom center ── */
+.glass-dock-wrapper {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  pointer-events: auto;
+  animation: dock-enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.4s;
+}
+
+@keyframes dock-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }

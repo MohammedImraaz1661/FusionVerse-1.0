@@ -1,14 +1,20 @@
 /* ── Home Section ── */
 .home-section {
-  /* background: var(--bg); */
   min-height: 100vh;
   width: 100%;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* offset for fixed navbar */
-  margin-top: 5rem;
+  background: #000;
+}
+
+/* ── Liquid WebGL background layer ── */
+.liquid-bg-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* ── Main hero ── */
@@ -23,21 +29,24 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 .club-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
   animation: fadeUp 0.8s ease both;
+  margin-bottom: 20px;
 }
 
 .club-name {
-  font-family: var(--font-display);
+  font-family: "T4C Beaulieux";
   font-size: clamp(48px, 7vw, 50px);
   font-weight: 400;
-  color: var(--fg);
+  color: #fff;
   line-height: 1.1;
   letter-spacing: 0.01em;
 }
@@ -46,25 +55,30 @@
   margin-top: .5rem;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--muted);
+  color: rgba(255,255,255,0.55);
   letter-spacing: 0.08em;
 }
 
 .hero-title {
-  font-family: var(--font-display);
+  font-family: "Astaghfirulloh Demo";
   font-size: clamp(64px, 11vw, 128px);
   font-weight: 400;
-  color: var(--fg);
+  color: #fff;
   letter-spacing: 0;
   line-height: 1;
   margin: 12px 0 0;
+  margin-bottom: 1rem;
   animation: fadeUp 0.85s 0.08s ease both;
+}
+
+.hero-title .version {
+  font-family: "T4C Beaulieux";
 }
 
 .hero-tagline {
   font-size: clamp(18px, 2.4vw, 20px);
   font-weight: 600;
-  color: var(--fg);
+  color: #fff;
   margin: 8px 0 0;
   animation: fadeUp 0.9s 0.16s ease both;
 }
@@ -72,7 +86,7 @@
 .hero-desc {
   font-size: clamp(16px, 2vw, 16px);
   font-weight: 500;
-  color: var(--fg);
+  color: #fff;
   line-height: 1.6;
   max-width: 500px;
   margin: 20px 0 0;
@@ -86,18 +100,20 @@
   margin-top: 24px;
   padding: 1.3rem 4rem;
   border: 1px solid #ffffff;
-  border-radius: 0;
+  border-radius: 0.5rem;
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.08em;
-  color: var(--fg);
+  color: #fff;
+  pointer-events: auto;
+  mix-blend-mode: normal;
   transition: background 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.2s;
 }
 
 .btn-register:hover {
   background-color: #ffffff;
-  color: black;
+  color: #000;
 }
 
 .btn-register:active { transform: translateY(0); }
@@ -116,10 +132,6 @@
 @media (max-width: 480px) {
   .hero-title {
     font-size: clamp(48px, 7vw, 50px);
-  }
-  
-  .home-main {
-    flex-wrap: no-wrap;  
   }
 
   .club-block {
