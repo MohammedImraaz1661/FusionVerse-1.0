@@ -3,9 +3,6 @@ import './About.css';
 export default function About() {
   return (
     <section id="about" className="about-section">
-      <div className="orb orb-about-1" aria-hidden="true" />
-      <div className="orb orb-about-2" aria-hidden="true" />
-
       <div className="about-inner">
         <div className="about-content">
           <h2 className="about-heading">About</h2>

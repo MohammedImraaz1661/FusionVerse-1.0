@@ -12,7 +12,7 @@
 .contact-main {
   margin-top: 2rem;
   display: flex;
-  gap: 20rem;
+  gap: 12rem;
 }
 
 /* Left column */
@@ -27,14 +27,14 @@
   font-family: var(--font-body);
   font-size: clamp(32px, 4vw, 42px);
   font-weight: 600;
-  color: #ffffff;
+  color: #000000;
   margin: 0;
   line-height: 1.1;
 }
 
 .contact-sub {
   font-size: clamp(14px, 1.4vw, 16px);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.6);
   line-height: 1.6;
   margin: 0;
 }
@@ -56,7 +56,7 @@
 .group-heading {
   font-size: 15px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.9);
   letter-spacing: 0.03em;
   margin: 0;
 }
@@ -76,12 +76,12 @@
 .contact-name {
   font-size: 15px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .contact-info {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .contact-image-area {
@@ -112,13 +112,13 @@
 .social-link {
   font-size: 14px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .social-link:hover {
-  color: rgba(255, 255, 255, 0.85);
+  color: #000000;
 }
 
 /* ── Responsive ── */

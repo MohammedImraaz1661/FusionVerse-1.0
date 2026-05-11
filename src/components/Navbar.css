@@ -2,104 +2,53 @@
 .navbar--fixed {
   position: fixed;
   top: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 48px);
-  max-width: 1200px;
+  left: 32px; /* Positioned at top-left on desktop */
+  width: fit-content;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 32px;
-  background: rgba(0, 0, 0, 0.7);
+  padding: 8px; /* Tighter padding to wrap the logo */
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 100px;
   z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-/* Logo — left */
+/* Logo wrapper */
+.navbar-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
 .navbar-logo {
   width: 48px;
   height: 48px;
   object-fit: cover;
   border-radius: 50%;
-  flex-shrink: 0;
   filter: drop-shadow(0 0 10px rgba(167,139,250,0.2));
+  transition: transform 0.2s ease;
 }
 
-/* Nav links — center (absolute so they stay perfectly centered) */
-.navbar-links {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-/* Dept label — right */
-.navbar-dept {
-  font-size: 12px;
-  font-weight: 400;
-  color: rgba(255,255,255,0.55);
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  flex-shrink: 0;
-  margin: 0;
-}
-
-/* Nav link styles */
-.nav-link {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.55);
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.nav-link--active {
-  color: #fff;
+.navbar-logo-wrapper:hover .navbar-logo {
+  transform: scale(1.05);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .navbar--fixed {
-    padding: 10px 20px;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px;
   }
 
   .navbar-logo {
-    width: 60px;
-    height: 60px;
-  }
-
-  .navbar-links {
-    position: static;
-    transform: none;
-    gap: 24px;
-  }
-
-  .navbar-dept {
-    display: none;
-  }
-
-  .nav-link {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar--fixed {
-    justify-content: center;
-  }
-
-  .navbar-links {
-    display: none;
+    width: 40px;
+    height: 40px;
   }
 }

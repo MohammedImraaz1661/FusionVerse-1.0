@@ -3,8 +3,6 @@ import './Register.css';
 export default function Register() {
   return (
     <section id="register" className="register-section">
-      <div className="orb orb-reg-1" aria-hidden="true" />
-
       <div className="register-inner">
         <div className="register-content">
           <h2 className="register-heading">Register</h2>

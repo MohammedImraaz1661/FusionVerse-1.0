@@ -40,7 +40,7 @@ export default function Contact() {
                 {contacts.committee.map(({ name, position, contact }, i) => (
                   <div className="contact-card" key={`committee-${i}`}>
                     <span className="contact-name">{name}</span>
-                    <span className="contact-info" style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>{position}</span>
+                    <span className="contact-info" style={{ fontSize: '13px', color: 'rgba(0,0,0,0.6)' }}>{position}</span>
                     <span className="contact-info">{contact}</span>
                   </div>
                 ))}

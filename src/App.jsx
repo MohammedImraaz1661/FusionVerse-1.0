@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import Navbar from './components/Navbar';
 import { DotmCircular8 } from './components/ui/dotm-circular-8';
 import { GlassDock } from './components/ui/glass-dock';
-import GridDistortion from './components/ui/grid-distortion';
+import VantaFog from './components/ui/vanta-fog';
 import Home from './pages/Home';
 import About from './pages/About';
 import Register from './pages/Register';
@@ -86,18 +87,20 @@ export default function App() {
       <div
         className={`app-scroll-container ${phase === 'ready' ? 'site-enter' : 'site-hidden'}`}
       >
+        <Navbar />
         <Home />
         
-        {/* Sections after hero */}
+        {/* Unified wrapper for sections after hero */}
         <div className="after-hero-wrapper">
-          <div className="grid-distortion-absolute">
-            <GridDistortion
-              imageSrc="/image.png"
-              grid={20}
-              mouse={0.1}
-              strength={0.15}
-              relaxation={0.9}
-            />
+          <div className="vanta-bg-absolute-global">
+             <VantaFog 
+                highlightColor={0xff9d00} // Bright Gold/Orange
+                midtoneColor={0xe3690f}  // Vibrant Hero Orange
+                lowlightColor={0xf2f2f2}  // Light grey shadows
+                baseColor={0xffffff}      // White section background
+                speed={0.8}
+                zoom={1.2}
+              />
           </div>
           <About />
           <Register />
